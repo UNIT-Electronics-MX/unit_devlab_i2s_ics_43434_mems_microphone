@@ -11,9 +11,6 @@
 | Digital audio interface | I²S |
 | Product-reference revision | 0.1.0, preliminary |
 
-This product uses the ICS-43434 I²S microphone. PDM timing and pin assignments
-must not be applied to this hardware.
-
 ### **1.2 Package Contents**
 
 The BOM includes one four-conductor, 1.0 mm-pitch QWIIC-style harness. Confirm
