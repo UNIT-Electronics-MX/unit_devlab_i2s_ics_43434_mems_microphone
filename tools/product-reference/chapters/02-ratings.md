@@ -7,7 +7,7 @@
 | VDD | ICS-43434 microphone supply | 1.62 to 3.63 V | Microphone pin |
 | ADC output | Digital sample width | 24 bit | Microphone I²S output |
 | SNR | Signal-to-noise ratio | 64 dBA typical | Microphone characteristic |
-| Frequency response | Stated audio band | 60 Hz to 20 kHz | Local microphone reference |
+| Frequency response | Stated audio band | 60 Hz to 20 kHz | EMMIC-ICS43434 reference |
 | Sensitivity tolerance | Unit-to-unit tolerance | ±1 dB | Microphone characteristic |
 | VREG | U3 regulated output | 3.3 V nominal | BOM identification |
 

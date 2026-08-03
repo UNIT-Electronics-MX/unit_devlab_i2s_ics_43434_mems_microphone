@@ -7,10 +7,6 @@ anti-aliasing filters, power management, and an I²S output.
 
 ![](hardware/resources/unit_top_v_1_0_0_i2s_ics43434_mems_microphone.png){width=5.4in}
 
-This is a preliminary product reference. It documents only the characteristics
-supported by the V1.0 artwork, manufacturing BOM, and the microphone reference
-currently stored in the repository.
-
 ### **Applications**
 
 - Voice capture and recognition prototypes

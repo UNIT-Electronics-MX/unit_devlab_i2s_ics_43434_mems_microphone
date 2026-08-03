@@ -11,9 +11,8 @@
 | Digital audio interface | I²S |
 | Product-reference revision | 0.1.0, preliminary |
 
-The repository sources identify this product as an ICS-43434 I²S module. They do
-not describe an ICS-41350 PDM module; PDM timing and pin assignments must not be
-applied to this hardware.
+This product uses the ICS-43434 I²S microphone. PDM timing and pin assignments
+must not be applied to this hardware.
 
 ### **1.2 Package Contents**
 

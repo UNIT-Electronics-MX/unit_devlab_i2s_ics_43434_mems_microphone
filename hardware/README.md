@@ -49,10 +49,10 @@ states and circuit behavior remain pending schematic confirmation.
 
 | Parameter | Value | Source / scope |
 |---|---:|---|
-| Microphone VDD | 1.62 V to 3.63 V | Local EMMIC-ICS43434 reference |
+| Microphone VDD | 1.62 V to 3.63 V | EMMIC-ICS43434 reference |
 | Digital output | 24 bit | ICS-43434 I²S interface |
 | Signal-to-noise ratio | 64 dBA typical | Microphone characteristic |
-| Frequency response | 60 Hz to 20 kHz | Range stated by the local reference |
+| Frequency response | 60 Hz to 20 kHz | Range stated by the EMMIC-ICS43434 reference |
 | Sensitivity tolerance | ±1 dB | Microphone characteristic |
 
 These microphone values are not the same as the permitted voltage at the
