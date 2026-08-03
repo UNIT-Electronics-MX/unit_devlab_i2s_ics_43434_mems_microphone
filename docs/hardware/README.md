@@ -1,90 +1,104 @@
-> **Note of Development:**  
-> This hardware module is under active development. File and directory structures, naming conventions, and documentation formats may change as the design evolves.  
-> 
-> - **File Naming:**  
->   - Use capital letters and underscores only.  
->   - Start filenames with `unit_<filename>_v_<version>_<description>.<ext>`.  
->   - Example: `unit_icp10111_barometric_pressure_sensor_v_1_0_0.png`
->   - Schematic: `schematic_v_<version>_<description>.<ext>` (e.g., `schematic_v_1_0_0_icp10111_barometric_pressure_sensor.png`)
->   - Topology: `unit_topology_v_<version>_<description>.<ext>`
->   - Dimensions: `unit_dimension_v_<version>_<description>.<ext>`
-> 
-> - **README Structure:**  
->   - Hardware overview  
->   - Pinout and connector layout  
->   - Dimensions and topology  
->   - Functional description  
->   - Applications  
->   - References  
-> 
-> Please refer to the latest commit history for updates and changes.
+# DevLab I²S ICS-43434 Hardware
 
-# Hardware
+This directory contains the available hardware resources for the **DevLab: I2S
+ICS-43434 MEMS Microphone**. Its manufacturing part number is **UE0149**. The
+board views show hardware revision V1.0.
+
+> This is an initial hardware reference. A released schematic, dimensional
+> drawing, pinout artwork, and complete module-level electrical validation have
+> not yet been added. Values marked as pending must not be inferred from the
+> regulator or individual component ratings.
+
+## Board Views
 
 <div align="center">
-<a href="{{schematic_url}}"><img src="resources/Schematics_icon.jpg?raw=false" width="200px"><br/>Schematic</a>
+  <img src="resources/unit_top_v_1_0_0_i2s_ics43434_mems_microphone.png" width="720px" alt="ICS-43434 module top view">
+  <p><em>Top view</em></p>
+  <img src="resources/unit_btm_v_1_0_0_i2s_ics43434_mems_microphone.png" width="720px" alt="ICS-43434 module bottom view">
+  <p><em>Bottom view</em></p>
 </div>
 
-## Pinout
+## Connector and Pin Layout
 
-<div align="center">
-    <a href="#"><img src="resources/unit_pinout_v_0_0_1_ue0094_icp10111_barometric_pressure_sensor_en.jpg" width="500px"><br/>Pinout</a>
-    <br/>
-    <br/>
-    <br/>
-    
+The seven edge connections and the six signal contacts of the JST-SH connector
+are identified by the released V1.0 board artwork. `VIN` is available only on
+the edge connection; the connector exposes `VSYS`, `GND`, `CH`, `WS`, `SD`, and
+`SCK`.
 
-| Pin Label | Function    | Notes                             |
-|-----------|-------------|-----------------------------------|
-| VCC       | Power Supply| 3.3V or 5V                       |
-| GND       | Ground      | Common ground for all components  |
+The BOM separately lists a four-conductor QWIIC-style harness. Because J1 is a
+six-position connector, cable inclusion and compatibility remain pending and
+must not be assumed from that BOM line alone.
 
-</div>
+| Signal | Direction | Description | Electrical status |
+|---|---|---|---|
+| `VIN` | Input | Module input supply before onboard regulation | Allowed module range pending |
+| `VSYS` | Power | Module system rail; routed to the JST supply contact | Value/range pending schematic verification |
+| `GND` | Power | Common reference | 0 V |
+| `CH` | Input | ICS-43434 left/right channel selection | Low selects left; high selects right |
+| `SCK` | Input | I²S serial bit clock from the host | Microphone digital input |
+| `WS` | Input | I²S word select from the host | Low = left word, high = right word |
+| `SD` | Output | I²S serial data to the host | 24-bit audio data |
 
-## Dimensions
+The bottom-side `L/R` solder selection controls the channel assignment. The
+board also includes `LED ON` and `JST VCC` solder options; their exact default
+states and circuit behavior remain pending schematic confirmation.
 
-<div align="center">
-<a href="./resources/unit_dimension_v_1_0_0_icp10111_barometric_pressure_sensor.png"><img src="./resources/unit_dimension_v_1_0_0_icp10111_barometric_pressure_sensor.png" width="500px"><br/> Dimensions</a>
-</div>
+## Essential Electrical Characteristics
 
-## Topology
+### ICS-43434 microphone
 
-<div align="center">
+| Parameter | Value | Source / scope |
+|---|---:|---|
+| Microphone VDD | 1.62 V to 3.63 V | Local EMMIC-ICS43434 reference |
+| Digital output | 24 bit | ICS-43434 I²S interface |
+| Signal-to-noise ratio | 64 dBA typical | Microphone characteristic |
+| Frequency response | 60 Hz to 20 kHz | Range stated by the local reference |
+| Sensitivity tolerance | ±1 dB | Microphone characteristic |
 
-<div align="center">
-<a href="./resources/unit_topology_V_0_0_1_ue0099_Sensor_Touch.png"><img src="./resources/unit_topology_V_0_0_1_ue0099_Sensor_Touch.png" width="500px"><br/> Topology</a>
-<br/>
-<br/>
-<br/>
+These microphone values are not the same as the permitted voltage at the
+module's `VIN` pin. `VIN` and `VSYS` limits will be published after the
+schematic and board measurements are available.
 
-| Ref. | Description                              |
-|------|------------------------------------------|
-| IC1  | {{sensor_description}}                   |
-| L1   | Power On LED                             |
-| U1   | {{regulator_description}}                | 
-| JP1  | 2.54 mm Castellated Holes                |
-| J1   | QWIIC Connector (JST 1 mm pitch) for I2C |
+### BOM-confirmed module components
 
-</div>
+| Reference | Component | Relevant identification |
+|---|---|---|
+| MK1 | Digital MEMS microphone | ICS-43434, bottom port, I²S output |
+| U3 | Fixed LDO regulator | AP2112K-3.3TRG1, 3.3 V |
+| J1 | 6-position connector | JST SM06B-SRSS-TB, SH series, 1.0 mm pitch |
+| U$1 | Edge/header connection | 1 × 7, 2.54 mm pitch |
+| D2 | Schottky diode | NSR0320MW2T1G |
+| D1 | Indicator LED | Orange, 0402 |
+| C8, C9 | Ceramic capacitors | 1 µF, 6.3 V, X5R, 0402 |
+| C6 | Ceramic capacitor | 100 nF, 0402 |
+| C1 | Ceramic capacitor | 200 pF, C0G, 50 V, 0402 |
+| R1 | Resistor | 4.7 kΩ, 0402 |
+| R2, R3 | Resistors | 10 kΩ, 0402 |
+| R5 | Resistor / link | 0 Ω, 0402 |
 
-## Pin & Connector Layout
-| Pin   | Voltage Level | Function                                                  |
-|-------|---------------|-----------------------------------------------------------|
-| VCC   | 3.3 V – 5.5 V | Provides power to the on-board regulator and sensor core. |
-| GND   | 0 V           | Common reference for power and signals.                   |
-| SDA   | 1.8 V to VCC  | Serial data line for I²C communications.                  |
-| SCL   | 1.8 V to VCC  | Serial clock line for I²C communications.                 |
+Component maximum ratings do not establish the allowable operating range of
+the assembled module. The maintained manufacturing BOM remains the controlling
+source for procurement details.
 
-> **Note:** The module also includes a Qwiic/STEMMA QT connector carrying the same four signals (VCC, GND, SDA, SCL) for effortless daisy-chaining.
+## Functional Overview
 
-## Functional Description
+The host supplies the I²S clocks on `SCK` and `WS`. The ICS-43434 converts the
+acoustic signal and transmits 24-bit samples on `SD` in the time slot selected
+by `CH`. The onboard AP2112K provides a 3.3 V rail for the microphone circuit.
 
-{{functional_description}}
+Keep the bottom acoustic port unobstructed and avoid debris, adhesive, flux,
+or enclosure pressure over the sound opening. Confirm common ground before
+applying clocks or power.
 
-## Applications
+## Development Status
 
-{{applications_list}}
+- The example under `software/examples/i2s/` is experimental and not yet part
+  of the validated product reference.
+- Host GPIO numbers are application-specific; they are not module pin numbers.
+- Module-level `VIN`/`VSYS` ratings, clock limits, current consumption,
+  dimensions, schematic, and validated setup procedure remain pending.
 
-# References
+## References
 
-- [{{datasheet_name}}]({{datasheet_url}})
+- [EMMIC-ICS43434 reference](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/external/emmic-ics43434-ds.pdf)
+- [Manufacturing BOM](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/UNIT-0149%20Devlab_%20I2S%20ICS-43434%20MEMS%20Microphone-20260803T153602Z-1-001/UNIT-0149%20Devlab_%20I2S%20ICS-43434%20MEMS%20Microphone/Fabricaci%C3%B3n%20/BOM/UE0149%20-BOM-%20I2S%20ICS-43434%20-%20P.xlsx)
