@@ -1,26 +1,3 @@
-> **Note of Development:**
-> This hardware module is under active development. File and directory
-> structures, naming conventions, and documentation formats may change as the
-> design evolves.
->
-> - **File Naming:**
->   - Use capital letters and underscores only.
->   - Start filenames with `unit_<filename>_v_<version>_<description>.<ext>`.
->   - Example: `unit_i2s_ics43434_mems_microphone_v_1_0_0.png`
->   - Schematic: `schematic_v_<version>_<description>.<ext>`.
->   - Topology: `unit_topology_v_<version>_<description>.<ext>`.
->   - Dimensions: `unit_dimension_v_<version>_<description>.<ext>`.
->
-> - **README Structure:**
->   - Hardware overview
->   - Pinout and connector layout
->   - Dimensions and topology
->   - Functional description
->   - Applications
->   - References
->
-> Please refer to the latest commit history for updates and changes.
-
 # Hardware
 
 The DevLab I2S ICS-43434 MEMS Microphone is a compact digital-audio module
@@ -28,7 +5,8 @@ based on the bottom-port ICS-43434 microphone. The board views correspond to
 hardware V1.0. Manufacturer part number: **UE0149**.
 
 <div align="center">
-<img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>Schematic: pending release
+<img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>Schematic
+<a href="resources/unit_sch_v_1_0_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
 </div>
 
 ## Pinout
@@ -43,10 +21,10 @@ hardware V1.0. Manufacturer part number: **UE0149**.
 
 | Pin Label | Direction | Function | Notes |
 |---|---|---|---|
-| `VIN` | Input | Module input supply | Allowed module range pending schematic verification |
-| `VSYS` | Power | Module system rail | Routed to the JST supply contact |
+| `VIN` | Input | Module input supply | 5 V - 3.3 V |
+| `VSYS` | Power | Module system rail | 3.3 V |
 | `GND` | Power | Common reference | 0 V |
-| `CH` | Input | I²S channel selection | Low selects left; high selects right |
+| `CH` | Input | I²S channel selection | Low selects righ; high selects left |
 | `SCK` | Input | I²S serial bit clock | Driven by the host |
 | `WS` | Input | I²S word select | Low is left word; high is right word |
 | `SD` | Output | I²S serial audio data | 24-bit microphone output |
