@@ -40,15 +40,27 @@ and anti-aliasing filters, power management, and an I²S interface.
 
 | Feature | Description |
 |---|---|
+| Product | DevLab I2S ICS-43434 MEMS Microphone |
+| Manufacturer Part Number | UE0149 |
+| Hardware Revision | V1.0 |
 | Microphone | InvenSense ICS-43434 bottom-port MEMS microphone |
+| Supply Voltage | 5 V - 3.3V |
+| Sleep Mode Current | 12 uA |
+| Sensitivity | -26 dB FS |
+| Directionality | Omni |
+| SNR | 64 dBA |
+| Dynamic Range| 90 dB |
+| Frequency Response | 60 Hz - 20 KHz |
+| PSR | -98 dB FS |
+| THD | 0.2 % |
+| Hardware Revision | V1.0 |
 | Audio Interface | I²S digital output |
 | Sample Width | 24 bit |
 | Channel Selection | `CH` input and `L/R` solder selection |
 | Microphone Supply | 1.62 V to 3.63 V at the ICS-43434 VDD pin |
 | Onboard Regulation | AP2112K fixed 3.3 V LDO |
 | Connections | Seven 2.54 mm edge connections and 6-pin JST-SH connector |
-| Hardware Revision | V1.0 |
-| Manufacturer Part Number | UE0149 |
+
 
 </div>
 
