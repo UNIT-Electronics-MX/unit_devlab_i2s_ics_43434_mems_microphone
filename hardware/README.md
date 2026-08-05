@@ -5,8 +5,8 @@ based on the bottom-port ICS-43434 microphone. The board views correspond to
 hardware V1.0. Manufacturer part number: **UE0149**.
 
 <div align="center">
-<img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>Schematic
-<a href="resources/unit_sch_v_1_0_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
+<img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>
+<a href="unit_sch_v_1_0_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
 </div>
 
 ## Pinout
