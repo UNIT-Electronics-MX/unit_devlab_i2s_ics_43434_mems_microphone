@@ -19,7 +19,7 @@ ICS-43434 microphone integrates signal conditioning, a 24-bit ADC, decimation
 and anti-aliasing filters, power management, and an I²S interface.
 
 <div align="center">
-  <img src="hardware/resources/unit_top_v_1_0_0_i2s_ics43434_mems_microphone.png" width="450px" alt="DevLab I2S ICS-43434 MEMS Microphone">
+  <img src="./hardware/resources/unit_top_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone_3d.png" width="450px" alt="DevLab I2S ICS-43434 MEMS Microphone">
   <p><em>DevLab I2S ICS-43434 MEMS Microphone</em></p>
 </div>
 
