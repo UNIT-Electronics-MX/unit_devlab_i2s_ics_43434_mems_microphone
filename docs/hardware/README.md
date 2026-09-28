@@ -6,18 +6,17 @@ hardware V1.0. Manufacturer part number: **UE0149**.
 
 <div align="center">
 <img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>
-<a href="unit_sch_v_1_0_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
+<a href="./unit_sch_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
 </div>
 
 ## Pinout
 
 <div align="center">
-    <a href="https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/unit_top_v_1_0_0_i2s_ics43434_mems_microphone.png"><img src="resources/unit_top_v_1_0_0_i2s_ics43434_mems_microphone.png" width="500px" alt="ICS-43434 module top view"><br/>Top-side signal labels</a>
-    <br/>
-    <br/>
-    <a href="https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/unit_btm_v_1_0_0_i2s_ics43434_mems_microphone.png"><img src="resources/unit_btm_v_1_0_0_i2s_ics43434_mems_microphone.png" width="500px" alt="ICS-43434 module bottom view"><br/>Bottom-side signal labels</a>
-    <br/>
-    <br/>
+<a href="./unit_pinout_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone_en.pdf">
+<img src="./resources/unit_pinout_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone_en.png" width="500px"><br/>
+Pinout
+</a>
+</div>
 
 | Pin Label | Direction | Function | Notes |
 |---|---|---|---|
@@ -34,15 +33,22 @@ hardware V1.0. Manufacturer part number: **UE0149**.
 ## Dimensions
 
 <div align="center">
-
-The controlled dimensional drawing and mounting-hole coordinates are pending.
-Do not scale mechanical dimensions from the rendered board views.
-
+<a href="./resources/unit_dimensions_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.png">
+<img src="./resources/unit_dimensions_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.png" width="600px"><br/>
+Dimensions
+</a>
 </div>
+
+---
 
 ## Topology
 
 <div align="center">
+<a href="./resources/unit_topology_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.png">
+<img src="./resources/unit_topology_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.png" width="800px"><br/>
+Topology
+</a>
+</div>
 
 | Ref. | Description |
 |---|---|
