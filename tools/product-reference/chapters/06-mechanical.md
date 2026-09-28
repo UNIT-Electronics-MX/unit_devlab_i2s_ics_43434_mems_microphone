@@ -1,6 +1,6 @@
 ## **6 Mechanical Information**
 
-![](hardware/resources/unit_top_v_1_0_0_i2s_ics43434_mems_microphone.png){width=5.4in}
+![](hardware/resources/unit_top_v_1_1_0_ue0149_devlab_i2s_ics_43434_mems_microphone_3d.png){width=5.4in}
 
 The board provides two mounting holes, seven edge connections, and a
 right-angle JST-SH connector. A controlled dimensional drawing has not yet
