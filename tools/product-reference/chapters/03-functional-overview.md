@@ -20,4 +20,4 @@ decoupling capacitors, orange indicator LED, and associated resistors. The
 exact `VIN`/`VSYS` power path and solder-option defaults remain pending until a
 released module schematic is available.
 
-![](hardware/resources/unit_btm_v_1_0_0_i2s_ics43434_mems_microphone.png){width=5.4in}
+![](hardware/resources/unit_btm_v_1_1_0_ue0149_devlab_i2s_ics_43434_mems_microphone_3d.png){width=5.4in}
