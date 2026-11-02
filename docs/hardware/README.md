@@ -9,6 +9,12 @@ hardware V1.0. Manufacturer part number: **UE0149**.
 <a href="./unit_sch_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
 </div>
 
+## Board Views
+
+![UE0149 I2S ICS-43434 top view](resources/unit_top_v_1_1_0_ue0149_devlab_i2s_ics_43434_mems_microphone_3d.png)
+
+![UE0149 I2S ICS-43434 bottom view](resources/unit_btm_v_1_1_0_ue0149_devlab_i2s_ics_43434_mems_microphone_3d.png)
+
 ## Pinout
 
 <div align="center">
