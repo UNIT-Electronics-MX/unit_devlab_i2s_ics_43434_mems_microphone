@@ -1,4 +1,26 @@
-# Hardware
+# DevLab I2S ICS-43434 MEMS Microphone Hardware
+
+## Hardware Scope
+
+This page documents **DevLab I2S ICS-43434 MEMS Microphone** (MPN **UE0149**) from the V1.1.0 board views, pinout, schematic, and available component records. Component ratings do not define the complete module input limits.
+
+## Power Tree
+
+The BOM identifies `U3` as an AP2112K fixed 3.3 V regulator in the microphone power section. The permitted module-level `VIN` and `VSYS` ranges require board validation; a dedicated power-tree drawing is not available.
+
+## Block Diagram
+
+A separate functional block-diagram drawing is not included in the available product-specific files. See the [Topology](#topology) section.
+
+## Naming Rules
+
+- Product name: **DevLab I2S ICS-43434 MEMS Microphone**.
+- Product family: **UNIT DevLab ecosystem**.
+- MPN: **UE0149**.
+- Existing source files retain their published names and revisions.
+- Generated Product Reference: `unit_product_reference_v_0_1_0_i2s_ics43434_mems_microphone.pdf`.
+
+## Hardware
 
 The DevLab I2S ICS-43434 MEMS Microphone is a compact digital-audio module
 based on the bottom-port ICS-43434 microphone. The board views correspond to
@@ -8,8 +30,6 @@ hardware V1.0. Manufacturer part number: **UE0149**.
 <img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>
 <a href="./unit_sch_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf">Schematic</a>
 </div>
-
-## Board Views
 
 ![UE0149 I2S ICS-43434 top view](resources/unit_top_v_1_1_0_ue0149_devlab_i2s_ics_43434_mems_microphone_3d.png)
 
@@ -26,15 +46,13 @@ Pinout
 
 | Pin Label | Direction | Function | Notes |
 |---|---|---|---|
-| `VIN` | Input | Module input supply | 5 V - 3.3 V |
+| `VIN` | Input | Module input supply | Module-level range pending validation |
 | `VSYS` | Power | Module system rail | 3.3 V |
 | `GND` | Power | Common reference | 0 V |
-| `CH` | Input | I²S channel selection | Low selects righ; high selects left |
+| `CH` | Input | I²S channel selection | Low selects right; high selects left |
 | `SCK` | Input | I²S serial bit clock | Driven by the host |
 | `WS` | Input | I²S word select | Low is left word; high is right word |
 | `SD` | Output | I²S serial audio data | 24-bit microphone output |
-
-</div>
 
 ## Dimensions
 
@@ -44,8 +62,6 @@ Pinout
 Dimensions
 </a>
 </div>
-
----
 
 ## Topology
 
@@ -67,8 +83,6 @@ Topology
 | `L/R` | Channel-selection solder option |
 | `LED ON` | Indicator solder option; behavior pending schematic verification |
 | `JST VCC` | Connector-supply solder option; behavior pending schematic verification |
-
-</div>
 
 ## Pin & Connector Layout
 
@@ -136,8 +150,9 @@ permitted voltage at the module's `VIN` pin.
 - Stereo and multi-microphone experiments
 - Educational I²S audio acquisition
 
-# References
+## References
 
 - [EMMIC-ICS43434 Reference](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/external/emmic-ics43434-ds.pdf)
 - [Manufacturing BOM](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/UNIT-0149%20Devlab_%20I2S%20ICS-43434%20MEMS%20Microphone-20260803T153602Z-1-001/UNIT-0149%20Devlab_%20I2S%20ICS-43434%20MEMS%20Microphone/Fabricaci%C3%B3n%20/BOM/UE0149%20-BOM-%20I2S%20ICS-43434%20-%20P.xlsx)
 - [Experimental I²S Example](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/software/examples/i2s/i2s.ino)
+- [Product Reference](../docs/hardware/unit_product_reference_v_0_1_0_i2s_ics43434_mems_microphone.pdf)
