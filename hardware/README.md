@@ -2,7 +2,11 @@
 
 ## Hardware Scope
 
-This page documents **DevLab I2S ICS-43434 MEMS Microphone** (MPN **UE0149**) from the V1.1.0 board views, pinout, schematic, and available component records. Component ratings do not define the complete module input limits.
+This page documents **DevLab I2S ICS-43434 MEMS Microphone** from the V1.1.0 board views, pinout, schematic, and available component records. Component ratings do not define the complete module input limits.
+
+| Field | Value |
+|---|---|
+| MPN | UE0149 |
 
 ## Power Tree
 
@@ -16,7 +20,6 @@ A separate functional block-diagram drawing is not included in the available pro
 
 - Product name: **DevLab I2S ICS-43434 MEMS Microphone**.
 - Product family: **UNIT DevLab ecosystem**.
-- MPN: **UE0149**.
 - Existing source files retain their published names and revisions.
 - Generated Product Reference: `unit_product_reference_v_0_1_0_i2s_ics43434_mems_microphone.pdf`.
 
@@ -24,7 +27,7 @@ A separate functional block-diagram drawing is not included in the available pro
 
 The DevLab I2S ICS-43434 MEMS Microphone is a compact digital-audio module
 based on the bottom-port ICS-43434 microphone. The board views correspond to
-hardware V1.0. Manufacturer part number: **UE0149**.
+hardware V1.0.
 
 <div align="center">
 <img src="resources/Schematics_icon.jpg?raw=false" width="200px" alt="Schematic"><br/>
