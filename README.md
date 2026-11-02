@@ -29,8 +29,7 @@ and anti-aliasing filters, power management, and an I²S interface.
 | Feature | Description |
 |---|---|
 | Product | DevLab I2S ICS-43434 MEMS Microphone |
-| Manufacturer Part Number | UE0149 |
-| Hardware Revision | V1.0 |
+| MPN | UE0149 |
 | Microphone | InvenSense ICS-43434 bottom-port MEMS microphone |
 | Supply Voltage | 5 V - 3.3V |
 | Sleep Mode Current | 12 uA |
