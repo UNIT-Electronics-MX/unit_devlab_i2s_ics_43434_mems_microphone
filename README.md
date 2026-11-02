@@ -1,17 +1,5 @@
 # DevLab: I2S ICS-43434 MEMS Microphone
-<!-- Exception:
 
-The PULSAR development board line does not use the DevLab: prefix.
-
-Format: PULSAR [MCU/Model]
-
-Examples: PULSAR C6, PULSAR H2, PULSAR RP2350
-
-The JUN R3 board also does not use DevLab:
-
-Example: JUN R3 -->
-
-## Introduction
 
 The DevLab I2S ICS-43434 MEMS Microphone is a compact digital-audio module for
 voice capture, acoustic sensing, and embedded audio prototypes. Its bottom-port
@@ -19,7 +7,7 @@ ICS-43434 microphone integrates signal conditioning, a 24-bit ADC, decimation
 and anti-aliasing filters, power management, and an I²S interface.
 
 <div align="center">
-  <img src="./hardware/resources/unit_top_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone_3d.png" width="450px" alt="DevLab I2S ICS-43434 MEMS Microphone">
+  <img src="./hardware/resources/unit_top_v_1_1_0_ue0149_devlab_i2s_ics_43434_mems_microphone_3d.png" width="450px" alt="DevLab I2S ICS-43434 MEMS Microphone">
   <p><em>DevLab I2S ICS-43434 MEMS Microphone</em></p>
 </div>
 
