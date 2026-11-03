@@ -3,6 +3,12 @@
 The product reference source is maintained in Markdown under `chapters/`. Document
 metadata and chapter order are defined in `book.yml`.
 
+## Board figures
+
+Chapter 4 embeds the [UE0149 pinout](assets/ue0149-pinout.png) and
+[UE0149 schematic](assets/ue0149-schematic.png) as images. The source
+drawings remain in `hardware/`.
+
 ## Local build
 
 Requirements:
