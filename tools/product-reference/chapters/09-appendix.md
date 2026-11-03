@@ -1,22 +1,18 @@
 ## **9 Appendix**
 
-### **9.1 Source Hierarchy**
+### **9.1 Technical Basis**
 
-This preliminary product reference follows the V1.0 board artwork for
-visible signal labels, the manufacturing BOM for fitted component identities,
-and the local EMMIC-ICS43434 document for the limited microphone values quoted
-here. A future released schematic and complete manufacturer datasheet take
-precedence if they conflict with this edition.
+This product reference follows the V1.0 board artwork for visible signal
+labels, the UE0149 schematic for circuit connections, and manufacturer
+datasheet DS-000069 revision 1.2 for ICS-43434 characteristics.
 
-### **9.2 Items Pending Validation**
+### **9.2 Document Scope**
 
-- Module schematic and controlled pin-number drawing
-- Module `VIN` and `VSYS` operating and absolute-maximum ratings
-- Digital input thresholds, current consumption, and clock limits
-- Tested sample rates and controller-specific I²S configurations
-- Board dimensions and mounting-hole coordinates
-- Solder-option defaults and JST cable orientation
-- Acoustic and environmental module-level characterization
+- Section 2 lists the ICS-43434 sensor characteristics and the module's
+  nominal regulated voltage.
+- Sections 3 and 4 describe the signal path, power circuit, and board connections.
+- Section 5 shows an ESP32-S3 capture example using the DevLab_AudioInput library.
+- Section 6 shows the board views and dimension drawing.
 
 ### **9.3 Document Control**
 
@@ -25,6 +21,6 @@ precedence if they conflict with this edition.
 | Product | DevLab: I2S ICS-43434 MEMS Microphone |
 | Manufacturer part number | UE0149 |
 | Hardware artwork covered | V1.0 |
-| Product-reference revision | 0.1.0, preliminary |
+| Product-reference revision | 0.1.0 |
 | Publication date | 2026-08-03 |
-| Firmware status | Experimental; not validated by this edition |
+| Firmware example | ESP32-S3 I²S capture in Section 5 |

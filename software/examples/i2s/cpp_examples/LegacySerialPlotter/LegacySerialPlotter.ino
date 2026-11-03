@@ -12,7 +12,8 @@
 #define MIC_CHANNEL_LEFT  0
 #define MIC_CHANNEL_RIGHT 1
 
-#define MIC_CHANNEL MIC_CHANNEL_RIGHT
+// La placa UE0149 selecciona LEFT por defecto; cambiar si CH selecciona RIGHT.
+#define MIC_CHANNEL MIC_CHANNEL_LEFT
 #define I2S_PORT I2S_NUM_0
 #define bufferLen 64
 

@@ -18,7 +18,7 @@ and anti-aliasing filters, power management, and an I²S interface.
 [<img src="https://img.shields.io/badge/Product%20Wiki-blue?style=for-the-badge" alt="Product Wiki">]()
 [<img src="https://img.shields.io/badge/Datasheet-green?style=for-the-badge" alt="Datasheet">](docs/hardware/unit_product_reference_v_0_1_0_i2s_ics43434_mems_microphone.pdf)
 [<img src="https://img.shields.io/badge/Buy%20Now-orange?style=for-the-badge" alt="Buy Now">]()
-[<img src="https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge" alt="Getting Started">](software/examples/i2s/i2s.ino)
+[<img src="https://img.shields.io/badge/Getting%20Started-purple?style=for-the-badge" alt="Getting Started">](software/examples/i2s/README.md)
 
 </div>
 
@@ -31,7 +31,7 @@ and anti-aliasing filters, power management, and an I²S interface.
 | Product | DevLab I2S ICS-43434 MEMS Microphone |
 | MPN | UE0149 |
 | Microphone | InvenSense ICS-43434 bottom-port MEMS microphone |
-| Supply Voltage | 5 V - 3.3V |
+| Module Input Voltage | Pending board-level validation; sensor VDD is 1.65–3.63 V |
 | Sleep Mode Current | 12 uA |
 | Sensitivity | -26 dB FS |
 | Directionality | Omni |
@@ -44,7 +44,7 @@ and anti-aliasing filters, power management, and an I²S interface.
 | Audio Interface | I²S digital output |
 | Sample Width | 24 bit |
 | Channel Selection | `CH` input and `L/R` solder selection |
-| Microphone Supply | 1.62 V to 3.63 V at the ICS-43434 VDD pin |
+| Microphone Supply | 1.65 V to 3.63 V at the ICS-43434 VDD pin |
 | Onboard Regulation | AP2112K fixed 3.3 V LDO |
 | Connections | Seven 2.54 mm edge connections and 6-pin JST-SH connector |
 
@@ -63,7 +63,9 @@ and anti-aliasing filters, power management, and an I²S interface.
 
 - [Schematic Diagram](<hardware/unit_sch_v_1_1_0_ue0149_devlab_ i2s_ics_43434_mems_microphone.pdf>)
 - [Pinout Diagram](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/README.md#pinout)
-- [I²S example](software/examples/i2s/i2s.ino)
+- [Arduino library example](software/examples/i2s/cpp_examples/AudioInputBasicRead/AudioInputBasicRead.ino)
+- [Software example instructions](software/examples/README.md)
+- [Legacy I²S driver example](software/examples/i2s/cpp_examples/LegacySerialPlotter/LegacySerialPlotter.ino)
 
 ## 📝 License
 

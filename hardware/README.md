@@ -14,7 +14,10 @@ The BOM identifies `U3` as an AP2112K fixed 3.3 V regulator in the microphone po
 
 ## Block Diagram
 
-A separate functional block-diagram drawing is not included in the available product-specific files. See the [Topology](#topology) section.
+![UE0149 I²S ICS-43434 functional block diagram](resources/external/i2s_ics_43434_mems_microphone.png)
+
+The host supplies `SCK` and `WS`; the microphone sends audio on
+`SD`. The diagram also shows channel control and the board power section.
 
 ## Naming Rules
 
@@ -52,7 +55,7 @@ Pinout
 | `VIN` | Input | Module input supply | Module-level range pending validation |
 | `VSYS` | Power | Module system rail | 3.3 V |
 | `GND` | Power | Common reference | 0 V |
-| `CH` | Input | I²S channel selection | Low selects right; high selects left |
+| `CH` | Input | I²S channel selection | Low selects left; high selects right; schematic default is left |
 | `SCK` | Input | I²S serial bit clock | Driven by the host |
 | `WS` | Input | I²S word select | Low is left word; high is right word |
 | `SD` | Output | I²S serial audio data | 24-bit microphone output |
@@ -121,9 +124,9 @@ power or clocks. Do not drive `SD`; it is an output from the microphone.
 
 | Parameter | Value | Scope |
 |---|---:|---|
-| Microphone VDD | 1.62 V to 3.63 V | ICS-43434 supply pin |
+| Microphone VDD | 1.65 V to 3.63 V | ICS-43434 supply pin, DS-000069 rev. 1.2 |
 | Digital output | 24 bit | ICS-43434 I²S interface |
-| Signal-to-noise ratio | 64 dBA typical | Microphone characteristic |
+| Signal-to-noise ratio | 65 dBA high-performance; 64 dBA low-power, typical | Microphone characteristic |
 | Frequency response | 60 Hz to 20 kHz | EMMIC-ICS43434 reference |
 | Sensitivity tolerance | ±1 dB | Microphone characteristic |
 
@@ -156,6 +159,8 @@ permitted voltage at the module's `VIN` pin.
 ## References
 
 - [EMMIC-ICS43434 Reference](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/external/emmic-ics43434-ds.pdf)
+- [Manufacturer ICS-43434 datasheet](resources/external/DS-000069-ICS-43434-v1.2.pdf)
+- [DevLab_AudioInput example](../software/examples/i2s/cpp_examples/AudioInputBasicRead/AudioInputBasicRead.ino)
 - [Manufacturing BOM](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/hardware/resources/UNIT-0149%20Devlab_%20I2S%20ICS-43434%20MEMS%20Microphone-20260803T153602Z-1-001/UNIT-0149%20Devlab_%20I2S%20ICS-43434%20MEMS%20Microphone/Fabricaci%C3%B3n%20/BOM/UE0149%20-BOM-%20I2S%20ICS-43434%20-%20P.xlsx)
-- [Experimental I²S Example](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/software/examples/i2s/i2s.ino)
+- [Legacy I²S Example](https://github.com/UNIT-Electronics-MX/unit_devlab_i2s_ics_43434_mems_microphone/blob/main/software/examples/i2s/cpp_examples/LegacySerialPlotter/LegacySerialPlotter.ino)
 - [Product Reference](../docs/hardware/unit_product_reference_v_0_1_0_i2s_ics43434_mems_microphone.pdf)

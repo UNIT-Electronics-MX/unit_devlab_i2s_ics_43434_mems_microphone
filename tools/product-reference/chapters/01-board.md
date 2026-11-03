@@ -9,11 +9,10 @@
 | Hardware revision shown | V1.0 |
 | Microphone | ICS-43434 |
 | Digital audio interface | I²S |
-| Product-reference revision | 0.1.0, preliminary |
+| Product-reference revision | 0.1.0 |
 
-### **1.2 Package Contents**
+### **1.2 Interface Hardware**
 
-The BOM includes one four-conductor, 1.0 mm-pitch QWIIC-style harness. Confirm
-the contents of a purchased product with the distributor because package
-contents have not yet been formally released. The BOM also identifies J1 as a
-six-position connector, so harness-to-J1 compatibility remains to be verified.
+The module provides seven 2.54 mm edge connections and a six-position,
+1.0 mm-pitch JST-SH connector. The connector carries `GND`, `VSYS`, `CH`,
+`WS`, `SD`, and `SCK`. Its signal order follows the board pinout in Section 4.

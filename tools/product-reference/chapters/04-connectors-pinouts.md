@@ -5,7 +5,7 @@
 | Board label | Direction | Function |
 |---|---|---|
 | `VSYS` | Power | Module system rail |
-| `VIN` | Input | Module supply input; allowed range pending |
+| `VIN` | Input | Regulator input |
 | `GND` | Power | Common ground |
 | `CH` | Input | Left/right I²S channel selection |
 | `SCK` | Input | I²S serial bit clock |
@@ -15,12 +15,12 @@
 ### **4.2 Six-Position JST-SH Connector**
 
 The V1.0 top artwork labels the connector signals, from the leftmost contact in
-the rendered top view, as `GND`, `VSYS`, `CH`, `WS`, `SD`, and `SCK`. Verify
-orientation on the physical board before making a cable; the present document
-does not assign connector pin numbers.
+the rendered top view, as `GND`, `VSYS`, `CH`, `WS`, `SD`, and `SCK`.
+The board pinout shows signal order by physical position.
 
 ### **4.3 Solder Options**
 
-The bottom artwork identifies `L/R`, `LED ON`, and `JST VCC` options. Their
-default copper states and exact circuit connections are pending schematic
-verification.
+The bottom artwork identifies `L/R`, `LED ON`, and `JST VCC` options.
+The circuit pulls `CH` low through 10 kΩ and selects the left channel by
+default. The assembled solder bridges determine channel selection, LED
+operation, and JST supply routing.
