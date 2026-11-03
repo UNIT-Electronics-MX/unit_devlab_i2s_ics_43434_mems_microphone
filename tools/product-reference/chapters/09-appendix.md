@@ -13,6 +13,7 @@ datasheet DS-000069 revision 1.2 for ICS-43434 characteristics.
 - Sections 3 and 4 describe the signal path, power circuit, and board connections.
 - Section 5 shows an ESP32-S3 capture example using the DevLab_AudioInput library.
 - Section 6 shows the board views and dimension drawing.
+- Section 9.4 presents the complete UE0149 board schematic.
 
 ### **9.3 Document Control**
 
@@ -24,3 +25,18 @@ datasheet DS-000069 revision 1.2 for ICS-43434 characteristics.
 | Product-reference revision | 0.1.0 |
 | Publication date | 2026-08-03 |
 | Firmware example | ESP32-S3 I²S capture in Section 5 |
+
+```{=latex}
+\clearpage
+```
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+### **9.4 Board Schematic** {.section-page}
+
+The UE0149 schematic shows the microphone, power supply, connector,
+channel selection, and indicator circuits.
+
+![UE0149 I²S ICS-43434 board schematic.](tools/product-reference/assets/ue0149-schematic.png){width=6.4in}
